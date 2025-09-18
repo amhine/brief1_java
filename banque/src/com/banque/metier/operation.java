@@ -33,7 +33,7 @@ public abstract class operation {
 
 	@Override
     public String toString() {
-        return "Opération #" + numero.substring(0, 5) + 
+        return "Opération #" + numero + 
                " - Date: " + date.toLocalDate() + 
                " - Montant: " + montant + " dh";
     }

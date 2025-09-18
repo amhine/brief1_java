@@ -18,7 +18,8 @@ public class retrait extends operation{
     }
 	 @Override
 	    public String toString() {
-	        return "Retrair - " + super.toString() + " - Destination: " + destination;
+	        return "Retrair - " + super.toString() + 
+	        		" - Destination: " + destination;
 	    }
 	
 }

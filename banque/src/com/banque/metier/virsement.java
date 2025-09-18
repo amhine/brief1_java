@@ -18,7 +18,8 @@ public class virsement extends operation{
 	
 	 @Override
 	    public String toString() {
-	        return "VERSEMENT - " + super.toString() + " - Source: " + source;
+	        return "VERSEMENT - " + super.toString() +
+	        		" - Source: " + source;
 	    }
 	   
 }
