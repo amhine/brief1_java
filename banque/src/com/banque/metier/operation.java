@@ -8,10 +8,10 @@ public abstract class operation {
 	
 	private String numero;
 	private LocalDateTime  date;
-	private Double montant;
+	private double montant;
 	
 	
-	public operation ( Double montant) {
+	public operation ( double montant) {
 		this.numero=UUID.randomUUID().toString();
 		this.date=LocalDateTime.now();
 		this.montant=montant;
@@ -27,15 +27,17 @@ public abstract class operation {
 	public Double getmontant() {
 		return montant;
 	}
-
-	
-	public abstract void afficherDetails();
-    public abstract String getType();
-    public void afficherDetailsBase() {
-        System.out.println("Numéro: " + numero);
-        System.out.println("Date: " + date);
-        System.out.println("Montant: " + montant + "dh");
+	public void setmontant(double montant) {
+        this.montant = montant;
     }
+
+	@Override
+    public String toString() {
+        return "Opération #" + numero.substring(0, 5) + 
+               " - Date: " + date.toLocalDate() + 
+               " - Montant: " + montant + " dh";
+    }
+	 
 	
 	
 	

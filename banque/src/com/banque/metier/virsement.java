@@ -15,5 +15,10 @@ public class virsement extends operation{
 	public void setsource(String source) {
         this.source = source;
     }
+	
+	 @Override
+	    public String toString() {
+	        return "VERSEMENT - " + super.toString() + " - Source: " + source;
+	    }
 	   
 }
