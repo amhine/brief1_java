@@ -1,5 +1,7 @@
 package com.banque.metier;
 
+import java.time.LocalDateTime;
+
 public class virsement extends operation{
 	
 	private String source;
@@ -17,9 +19,13 @@ public class virsement extends operation{
     }
 	
 	 @Override
-	    public String toString() {
-	        return "VERSEMENT - " + super.toString() +
-	        		" - Source: " + source;
+	 public String toString() {
+	        return "Versement {" +
+	               "numero='" + getnumero() + '\'' +
+	               ", date=" + getdate() +
+	               ", montant=" + getmontant() + " dh" +
+	               ", source='" + source + '\'' +
+	               '}';
 	    }
 	   
 }

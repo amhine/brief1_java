@@ -16,10 +16,15 @@ public class retrait extends operation{
 	public void setDestination(String destination) {
         this.destination = destination;
     }
+	
 	 @Override
-	    public String toString() {
-	        return "Retrair - " + super.toString() + 
-	        		" - Destination: " + destination;
+	 public String toString() {
+	        return "Versement {" +
+	               "numero='" + getnumero() + '\'' +
+	               ", date=" + getdate() +
+	               ", montant=" + getmontant() + " dh" +
+	               
+	               '}';
 	    }
 	
 }
