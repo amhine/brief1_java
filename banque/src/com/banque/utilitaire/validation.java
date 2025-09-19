@@ -17,4 +17,9 @@ public final class validation {
             throw new IllegalArgumentException("Code de compte invalide. Format attendu: CPT-12345");
         }
     }
+    public static void validateMontantPositif(double montant) {
+        if (montant <= 0) {
+            throw new IllegalArgumentException("Le montant doit être positif.");
+        }
+    }
 }

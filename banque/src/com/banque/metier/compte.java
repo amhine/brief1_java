@@ -38,7 +38,15 @@ public abstract class compte {
     }
 	
 	
-	
+	public boolean verser(double montant, String source) {
+        if (montant <= 0) {
+            return false;
+        }
+        virsement virsement = new virsement(montant, source);
+        this.setsolde(this.getsolde() + montant);
+        ajouterOperation(virsement);
+        return true;
+    }
 	public void ajouterOperation(operation operation) {
         this.listeOperations.add(operation);
     }
