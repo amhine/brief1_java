@@ -111,8 +111,9 @@ public class Menu {
         double solde = scanner.nextDouble();
         validation.validateMontantPositif(solde);
         
-        System.out.print("Entrez le taux d'intérêt (ex: 0.03 pour 3%): ");
+        System.out.print("Entrez le taux d'intérêt : ");
         double taux = scanner.nextDouble();
+        taux = taux / 100.0;
         if (taux <= 0) {
             throw new IllegalArgumentException("Le taux d'intérêt doit être positif.");
         }
@@ -207,7 +208,6 @@ public class Menu {
             System.out.println("Compte non trouvé.");
             return;
         }
-        System.out.println("Solde actuel: " + compte.getsolde() + " dh");
         compte.afficherDetails();
     }
     
